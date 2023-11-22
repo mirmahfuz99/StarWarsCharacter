@@ -1,4 +1,5 @@
 package com.starwarscharacter.app.features.character.data.model.mapper
+
 import com.starwarscharacter.app.features.character.data.model.dto.CharacterResult
 import com.starwarscharacter.app.features.character.domain.entity.Character
 import java.util.UUID

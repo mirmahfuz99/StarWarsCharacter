@@ -1,10 +1,12 @@
+package com.starwarscharacter.app.features.character.data.repository
+
+
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.starwarscharacter.app.core.db.StarWarsDatabase
 import com.starwarscharacter.app.features.character.data.datasource.remote.CharacterRemoteDataSource
-import com.starwarscharacter.app.features.character.data.repository.CharacterRemoteMediator
 import com.starwarscharacter.app.features.character.domain.entity.Character
 import com.starwarscharacter.app.features.character.domain.repository.CharacterRepository
 import kotlinx.coroutines.flow.Flow

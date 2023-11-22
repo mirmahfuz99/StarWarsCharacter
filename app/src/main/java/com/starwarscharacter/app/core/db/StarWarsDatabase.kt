@@ -1,11 +1,10 @@
 package com.starwarscharacter.app.core.db
 
-
-import CharacterDao
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.starwars.app.character.data.datasource.local.CharacterRemoteKeys
-import com.starwars.app.character.data.datasource.local.CharacterRemoteKeysDao
+import com.starwarscharacter.app.features.character.data.datasource.local.CharacterDao
+import com.starwarscharacter.app.features.character.data.datasource.local.CharacterRemoteKeys
+import com.starwarscharacter.app.features.character.data.datasource.local.CharacterRemoteKeysDao
 import com.starwarscharacter.app.features.character.domain.entity.Character
 
 

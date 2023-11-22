@@ -1,4 +1,4 @@
-package com.starwars.app.core.db
+package com.starwarscharacter.app.core.db
 
 interface StarWarsDao {
 }

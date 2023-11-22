@@ -1,6 +1,5 @@
 package com.starwarscharacter.app.features.character.presentation
 
-import CharacterItem
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,6 +11,7 @@ import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.starwarscharacter.app.features.character.domain.entity.Character
+import com.starwarscharacter.app.features.character.presentation.component.CharacterItem
 import com.starwarscharacter.app.utils.ErrorMessage
 import com.starwarscharacter.app.utils.LoadingNextPageItem
 import com.starwarscharacter.app.utils.PageLoader

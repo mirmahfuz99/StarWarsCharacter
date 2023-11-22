@@ -1,4 +1,4 @@
-package com.starwars.app.character.data.datasource.local
+package com.starwarscharacter.app.features.character.data.datasource.local
 
 import androidx.room.Dao
 import androidx.room.Insert

@@ -1,4 +1,5 @@
 package com.starwarscharacter.app.features.character.domain.usecase
+
 import androidx.paging.PagingData
 import com.starwarscharacter.app.core.BaseUseCase
 import com.starwarscharacter.app.features.character.domain.entity.Character

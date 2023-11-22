@@ -1,10 +1,10 @@
 package com.starwarscharacter.app.core.di
 
-import CharacterRemoteDataSourceImpl
-import CharacterRepositoryImpl
 import com.starwarscharacter.app.core.api.StarWarsApi
 import com.starwarscharacter.app.core.db.StarWarsDatabase
 import com.starwarscharacter.app.features.character.data.datasource.remote.CharacterRemoteDataSource
+import com.starwarscharacter.app.features.character.data.datasource.remote.CharacterRemoteDataSourceImpl
+import com.starwarscharacter.app.features.character.data.repository.CharacterRepositoryImpl
 import com.starwarscharacter.app.features.character.domain.repository.CharacterRepository
 import com.starwarscharacter.app.features.character.domain.usecase.GetCharactersUseCase
 import dagger.Module
