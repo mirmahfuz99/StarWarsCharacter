@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
@@ -15,7 +16,6 @@ import com.starwarscharacter.app.features.starships.presentation.component.StarS
 import com.starwarscharacter.app.utils.ErrorMessage
 import com.starwarscharacter.app.utils.LoadingNextPageItem
 import com.starwarscharacter.app.utils.PageLoader
-
 
 @Composable
 fun StarShipsScreen(
@@ -52,6 +52,7 @@ fun StarShipsScreen(
                 }
 
                 loadState.append is LoadState.Error -> {
+                    print("inside_load_state_error");
                     val error = starShipsPagingItems.loadState.append as LoadState.Error
                     item {
                         ErrorMessage(
@@ -65,4 +66,3 @@ fun StarShipsScreen(
         item { Spacer(modifier = Modifier.padding(4.dp)) }
     }
 }
-

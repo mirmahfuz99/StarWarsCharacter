@@ -12,9 +12,9 @@ interface StarShipsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(characters: List<StarShips>)
 
-    @Query("SELECT * FROM characters")
+    @Query("SELECT * FROM starShips")
     fun getAll(): PagingSource<Int, StarShips>
 
-    @Query("DELETE FROM characters")
-    suspend fun clearCharacters()
+    @Query("DELETE FROM starShips")
+    suspend fun clearStarShips()
 }

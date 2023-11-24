@@ -32,13 +32,13 @@ fun StarShipsItem(starShips: StarShips){
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = starShips.birthYear!!,
+                    text = starShips.model!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = starShips.gender!!,
+                    text = starShips.crew!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,

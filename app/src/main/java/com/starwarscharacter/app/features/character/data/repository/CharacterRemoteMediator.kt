@@ -1,5 +1,6 @@
 package com.starwarscharacter.app.features.character.data.repository
 
+import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
@@ -67,6 +68,7 @@ class CharacterRemoteMediator(
                     CharacterRemoteKeys(characterId = it.id, prevKey = prevKey, nextKey = nextKey)
                 }
                 starWarsDatabase.characterRemoteKeysDao().insertAll(keys)
+                Log.d("CharacterRemoteMediator", characters.toString())
                 starWarsDatabase.characterDao().insertAll(characters)
             }
             return MediatorResult.Success(endOfPaginationReached = endOfPaginationReached)

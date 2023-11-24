@@ -30,6 +30,7 @@ class StarShipsViewModel @Inject constructor (
                 .cachedIn(viewModelScope)
                 .collect {
                     _starShipsState.value = it
+
                 }
         }
     }

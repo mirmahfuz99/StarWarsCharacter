@@ -8,14 +8,12 @@ fun StarShipsResult.mapFromEntity() = StarShips(
     id = UUID.randomUUID().toString(),
     name = this.name,
     model = this.model,
-    manufacturer = this.manufac,
-    costInCredits = this.hairColor,
-    length = this.height,
-    crew = this.name,
-    passengers = this.name,
-    cargoCapacity = this.name,
-    gmlt = this.name,
-    starshipClass = this.name,
+    manufacturer = this.manufacturer,
+    length = this.length,
+    crew = this.crew,
+    passengers = this.passengers,
+    cargoCapacity = this.cargoCapacity,
+    starshipClass = this.starshipClass,
 )
 
 fun List<StarShipsResult>.mapStarShipsFromListModel(): List<StarShips>{

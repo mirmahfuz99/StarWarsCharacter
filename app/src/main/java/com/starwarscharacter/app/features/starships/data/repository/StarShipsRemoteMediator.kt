@@ -1,5 +1,6 @@
 package com.starwarscharacter.app.features.starships.data.repository
 
+import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
@@ -58,7 +59,7 @@ class StarShipsRemoteMediator(
                 // clear all tables in the database
                 if (loadType == LoadType.REFRESH) {
                     starWarsDatabase.starShipsRemoteKeysDao().clearRemoteKeys()
-                    starWarsDatabase.starshipsDao().clearCharacters()
+                    starWarsDatabase.starshipsDao().clearStarShips()
                 }
                 val prevKey = if (page == 1) null else page - 1
                 val nextKey = if (endOfPaginationReached) null else page + 1
@@ -68,6 +69,7 @@ class StarShipsRemoteMediator(
                     StarShipsRemotekeys(starShipsId = it.id, prevKey = prevKey, nextKey = nextKey)
                 }
                 starWarsDatabase.starShipsRemoteKeysDao().insertAll(keys)
+                Log.d("StarShipsRemoteMediator", starships.toString())
                 starWarsDatabase.starshipsDao().insertAll(starships)
             }
             return MediatorResult.Success(endOfPaginationReached = endOfPaginationReached)
