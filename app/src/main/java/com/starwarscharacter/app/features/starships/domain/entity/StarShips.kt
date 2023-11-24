@@ -7,11 +7,13 @@ import androidx.room.PrimaryKey
 data class StarShips(
     @PrimaryKey
     var id: String = "",
-    val birthYear: String?,
-    val eyeColor: String?,
-    val gender: String?,
-    val hairColor: String?,
-    val height: String?,
     val name: String?,
-    val skinColor: String?,
+    val model: String?,
+    val manufacturer: String?,
+    val costInCredits: String?,
+    val length: String?,
+    val crew: String?,
+    val passengers: String?,
+    val cargoCapacity: String?,
+    val starshipClass: String?,
 )

@@ -6,13 +6,16 @@ import java.util.UUID
 
 fun StarShipsResult.mapFromEntity() = StarShips(
     id = UUID.randomUUID().toString(),
-    birthYear = this.birthYear,
-    eyeColor = this.eyeColor,
-    gender = this.gender,
-    hairColor = this.hairColor,
-    height = this.height,
     name = this.name,
-    skinColor = this.skinColor
+    model = this.model,
+    manufacturer = this.manufac,
+    costInCredits = this.hairColor,
+    length = this.height,
+    crew = this.name,
+    passengers = this.name,
+    cargoCapacity = this.name,
+    gmlt = this.name,
+    starshipClass = this.name,
 )
 
 fun List<StarShipsResult>.mapStarShipsFromListModel(): List<StarShips>{

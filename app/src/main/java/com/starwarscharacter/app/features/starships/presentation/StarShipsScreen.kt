@@ -21,24 +21,24 @@ import com.starwarscharacter.app.utils.PageLoader
 fun StarShipsScreen(
     viewModel: StarShipsViewModel = hiltViewModel()
 ) {
-    val characterPagingItems: LazyPagingItems<StarShips> = viewModel.starShipsState.collectAsLazyPagingItems()
+    val starShipsPagingItems: LazyPagingItems<StarShips> = viewModel.starShipsState.collectAsLazyPagingItems()
     LazyColumn(
         modifier = Modifier.padding(horizontal = 16.dp)
     ) {
         item { Spacer(modifier = Modifier.padding(4.dp)) }
 
-        items(characterPagingItems.itemCount) { index ->
-            StarShipsItem(characterPagingItems[index]!!)
+        items(starShipsPagingItems.itemCount) { index ->
+            StarShipsItem(starShipsPagingItems[index]!!)
         }
 
-        characterPagingItems.apply {
+        starShipsPagingItems.apply {
             when {
                 loadState.refresh is LoadState.Loading -> {
                     item { PageLoader(modifier = Modifier.fillParentMaxSize()) }
                 }
 
                 loadState.refresh is LoadState.Error -> {
-                    val error = characterPagingItems.loadState.refresh as LoadState.Error
+                    val error = starShipsPagingItems.loadState.refresh as LoadState.Error
                     item {
                         ErrorMessage(
                             modifier = Modifier.fillParentMaxSize(),
@@ -52,7 +52,7 @@ fun StarShipsScreen(
                 }
 
                 loadState.append is LoadState.Error -> {
-                    val error = characterPagingItems.loadState.append as LoadState.Error
+                    val error = starShipsPagingItems.loadState.append as LoadState.Error
                     item {
                         ErrorMessage(
                             modifier = Modifier,
