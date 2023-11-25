@@ -3,7 +3,7 @@
 <img src="screenshots/mocup.png" width="750"/> 
 
 # StarWars
-An Android app built with Kotlin, consuming [StarWars API](https://swapi.dev/) to fetch characters, Starships, and planets. It is built with a clean architecture, MVVM pattern, and the latest Jetpack Compose.
+An Android app built with Kotlin, to fetch characters, Starships, and planets from [StarWars API](https://swapi.dev/) . It is built with a clean architecture, MVVM pattern, and the latest Jetpack Compose.
 
 ## Features
 - Character List Screen
