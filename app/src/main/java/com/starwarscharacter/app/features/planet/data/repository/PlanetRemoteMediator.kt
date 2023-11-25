@@ -8,7 +8,7 @@ import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.starwarscharacter.app.core.db.StarWarsDatabase
 import com.starwarscharacter.app.features.planet.data.datasource.local.PlanetsRemotekeys
-import com.starwarscharacter.app.features.planet.data.datasource.remote.PlanetRemoteDataSource
+import com.starwarscharacter.app.features.planet.data.datasource.remote.PlanetsRemoteDataSource
 import com.starwarscharacter.app.features.planet.data.model.mapper.mapPlanetsListModel
 import com.starwarscharacter.app.features.planet.domain.entity.Planets
 import retrofit2.HttpException
@@ -18,7 +18,7 @@ import java.io.IOException
 @OptIn(ExperimentalPagingApi::class)
 class PlanetRemoteMediator(
     private val starWarsDatabase: StarWarsDatabase,
-    private val remoteDataSource: PlanetRemoteDataSource
+    private val remoteDataSource: PlanetsRemoteDataSource
 ) : RemoteMediator<Int, Planets>() {
 
     override suspend fun initialize(): InitializeAction {
@@ -59,7 +59,7 @@ class PlanetRemoteMediator(
                 // clear all tables in the database
                 if (loadType == LoadType.REFRESH) {
                     starWarsDatabase.starShipsRemoteKeysDao().clearRemoteKeys()
-                    starWarsDatabase.starshipsDao().clearStarShips()
+                    starWarsDatabase.planetsDao().clearPlanets()
                 }
                 val prevKey = if (page == 1) null else page - 1
                 val nextKey = if (endOfPaginationReached) null else page + 1

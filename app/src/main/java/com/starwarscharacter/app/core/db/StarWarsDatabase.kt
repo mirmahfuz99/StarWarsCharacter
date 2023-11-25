@@ -8,6 +8,8 @@ import com.starwarscharacter.app.features.character.data.datasource.local.Charac
 import com.starwarscharacter.app.features.character.domain.entity.Character
 import com.starwarscharacter.app.features.planet.data.datasource.local.PlanetsDao
 import com.starwarscharacter.app.features.planet.data.datasource.local.PlanetsRemoteKeysDao
+import com.starwarscharacter.app.features.planet.data.datasource.local.PlanetsRemotekeys
+import com.starwarscharacter.app.features.planet.domain.entity.Planets
 import com.starwarscharacter.app.features.starships.data.datasource.local.StarShipsDao
 import com.starwarscharacter.app.features.starships.data.datasource.local.StarShipsRemoteKeysDao
 import com.starwarscharacter.app.features.starships.data.datasource.local.StarShipsRemotekeys
@@ -20,7 +22,10 @@ import com.starwarscharacter.app.features.starships.domain.entity.StarShips
         CharacterRemoteKeys::class,
 
         StarShips::class,
-        StarShipsRemotekeys::class],
+        StarShipsRemotekeys::class,
+
+        Planets::class,
+        PlanetsRemotekeys::class],
     version = 1,
     exportSchema = false
 )

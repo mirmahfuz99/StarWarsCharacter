@@ -5,5 +5,5 @@ import com.starwarscharacter.app.features.planet.domain.entity.Planets
 import kotlinx.coroutines.flow.Flow
 
 interface PlanetsRepository {
-    suspend fun getStarShips(): Flow<PagingData<Planets>>
+    suspend fun getPlanets(): Flow<PagingData<Planets>>
 }

@@ -7,13 +7,14 @@ import java.util.UUID
 fun PlanetsResult.mapFromEntity() = Planets(
     id = UUID.randomUUID().toString(),
     name = this.name,
-    model = this.model,
-    manufacturer = this.manufacturer,
-    length = this.length,
-    crew = this.crew,
-    passengers = this.passengers,
-    cargoCapacity = this.cargoCapacity,
-    starshipClass = this.starshipClass,
+    rotationPeriod = this.rotationPeriod,
+    orbitalPeriod = this.orbitalPeriod,
+    diameter = this.diameter,
+    climate = this.climate,
+    gravity = this.gravity,
+    terrain = this.terrain,
+    surfaceWater = this.surfaceWater,
+    population = this.population,
 )
 
 fun List<PlanetsResult>.mapPlanetsListModel(): List<Planets>{

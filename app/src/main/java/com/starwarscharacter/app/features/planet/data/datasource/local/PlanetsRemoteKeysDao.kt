@@ -10,8 +10,8 @@ interface PlanetsRemoteKeysDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(remoteKey: List<PlanetsRemotekeys>)
 
-    @Query("SELECT * FROM starships_remote_keys WHERE starShipsId = :starShipsId")
-    suspend fun remoteKeysStarShipsId(starShipsId: String): PlanetsRemotekeys?
+    @Query("SELECT * FROM planets_remote_keys WHERE planetsId = :planetsId")
+    suspend fun remoteKeysStarShipsId(planetsId: String): PlanetsRemotekeys?
 
     @Query("DELETE FROM starships_remote_keys")
     suspend fun clearRemoteKeys()

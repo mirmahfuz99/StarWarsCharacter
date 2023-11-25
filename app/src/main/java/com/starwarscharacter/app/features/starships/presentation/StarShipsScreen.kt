@@ -18,7 +18,7 @@ import com.starwarscharacter.app.utils.PageLoader
 
 @Composable
 fun StarShipsScreen(
-    viewModel: PlanetsViewModel = hiltViewModel()
+    viewModel: StarShipsViewModel = hiltViewModel()
 ) {
     val starShipsPagingItems: LazyPagingItems<StarShips> = viewModel.starShipsState.collectAsLazyPagingItems()
     LazyColumn(

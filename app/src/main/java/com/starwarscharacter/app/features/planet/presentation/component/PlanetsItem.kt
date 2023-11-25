@@ -32,13 +32,13 @@ fun PlanetsItem(starShips: Planets){
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = starShips.model!!,
+                    text = starShips.climate!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = starShips.crew!!,
+                    text = starShips.gravity!!,
                     modifier = Modifier
                         .padding(16.dp),
                     textAlign = TextAlign.Center,

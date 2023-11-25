@@ -11,6 +11,6 @@ class GetPlanetsUseCase @Inject constructor(
     private val repository: PlanetsRepository
 ) : BaseUseCase<Unit, Flow<PagingData<Planets>>> {
     override suspend fun execute(input: Unit): Flow<PagingData<Planets>> {
-        return repository.getStarShips()
+        return repository.getPlanets()
     }
 }

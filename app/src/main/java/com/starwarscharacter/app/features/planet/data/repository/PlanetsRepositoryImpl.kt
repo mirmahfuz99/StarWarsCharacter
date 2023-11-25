@@ -17,7 +17,7 @@ class PlanetsRepositoryImpl @Inject constructor(
     private val sharacterRemoteDataSource: PlanetsRemoteDataSource,
     private val starWarsDatabase: StarWarsDatabase
 ) : PlanetsRepository {
-    override suspend fun getStarShips(): Flow<PagingData<Planets>> {
+    override suspend fun getPlanets(): Flow<PagingData<Planets>> {
         val pagingSourceFactory = { starWarsDatabase.planetsDao().getAll() }
 
         @OptIn(ExperimentalPagingApi::class)
