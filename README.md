@@ -32,11 +32,11 @@ An Android app built with Kotlin, consuming [StarWars API](https://swapi.dev/) t
 
 
 ## Setup Requirements
-- Android device or emulator
-- Android Studio
+- Android Studio and Android device or emulator
+
 
 ## Getting Started
-In order to get the app running yourself, you need to:
+In order to run this app on your machine, you need to:
 
 1.  Clone this project
 2.  Import the project into Android Studio
