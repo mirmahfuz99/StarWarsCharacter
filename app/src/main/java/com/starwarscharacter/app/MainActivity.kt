@@ -7,10 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.starwarscharacter.app.core.navigation.AppNavigation
-import com.starwarscharacter.app.features.character.presentation.CharacterScreen
-import com.starwarscharacter.app.features.planet.presentation.PlanetsScreen
-import com.starwarscharacter.app.features.starships.presentation.StarShipsScreen
+import com.starwarscharacter.app.utils.navigation.MainScreen
 import com.starwarscharacter.app.ui.theme.StarWarsCharacterTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,10 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-//                    CharacterScreen()
-//                    StarShipsScreen()
-//                    PlanetsScreen()
-                    AppNavigation()
+                    MainScreen()
                 }
 
             }

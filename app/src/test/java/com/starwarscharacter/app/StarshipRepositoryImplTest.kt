@@ -32,18 +32,16 @@ class StarshipRepositoryImplTest {
         starshipDao = mock(StarShipsDao::class.java)
         starshipRepository = StarShipsRepositoryImpl(starshipRemoteDataSource, starWarsDatabase)
 
-        // Mock the behavior of starWarsDatabase to return starshipDao
         Mockito.`when`(starWarsDatabase.starshipsDao()).thenReturn(starshipDao)
     }
 
     @Test
-    fun getStarships_returnsPagingData() = runBlocking {
+    fun getStarships_and_returnsPagingData() = runBlocking {
         val pagingSource: PagingSource<Int, StarShips> = mock(PagingSource::class.java) as PagingSource<Int, StarShips>
         Mockito.`when`(starshipDao.getAll()).thenReturn(pagingSource)
 
         val result: Flow<PagingData<StarShips>> = starshipRepository.getStarShips()
 
-        // Verify that the function behaves as expected
         assertNotNull(result)
     }
 }

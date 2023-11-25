@@ -1,4 +1,4 @@
-package com.starwarscharacter.app.core.navigation
+package com.starwarscharacter.app.utils.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person

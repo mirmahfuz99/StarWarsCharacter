@@ -1,4 +1,4 @@
-package com.starwarscharacter.app.core.navigation
+package com.starwarscharacter.app.utils.navigation
 
 enum class Screens {
     CharacterScreen,

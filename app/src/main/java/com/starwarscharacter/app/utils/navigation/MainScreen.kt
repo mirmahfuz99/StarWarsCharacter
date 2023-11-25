@@ -1,4 +1,4 @@
-package com.starwarscharacter.app.core.navigation
+package com.starwarscharacter.app.utils.navigation
 
 
 import androidx.compose.foundation.layout.padding
@@ -24,7 +24,7 @@ import com.starwarscharacter.app.features.starships.presentation.StarShipsScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppNavigation(){
+fun MainScreen(){
     val navController : NavHostController = rememberNavController()
 
     Scaffold(
@@ -33,7 +33,7 @@ fun AppNavigation(){
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentDestination = navBackStackEntry?.destination
 
-                listOfNavItems.forEach {navItem ->
+                listOfNavItems.forEach { navItem ->
 
                 NavigationBarItem(
                     selected = currentDestination?.hierarchy?.any{ it.route == navItem.route} == true,

@@ -1,10 +1,10 @@
 package com.starwarscharacter.app.features.character.presentation.component
 
-
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -19,11 +19,14 @@ import com.starwarscharacter.app.features.character.domain.entity.Character
 fun CharacterItem(character: Character){
     Box(modifier = Modifier.padding(top = 8.dp)) {
         Card(
+
             colors = CardDefaults.cardColors(
-                containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                containerColor = MaterialTheme.colorScheme.onSecondary,
             ),
+            shape = RoundedCornerShape(4.dp),
             modifier = Modifier
                 .fillMaxWidth()
+
         ) {
             Column {
                 Text(
