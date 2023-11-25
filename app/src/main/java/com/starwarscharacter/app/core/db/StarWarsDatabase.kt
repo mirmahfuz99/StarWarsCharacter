@@ -6,6 +6,8 @@ import com.starwarscharacter.app.features.character.data.datasource.local.Charac
 import com.starwarscharacter.app.features.character.data.datasource.local.CharacterRemoteKeys
 import com.starwarscharacter.app.features.character.data.datasource.local.CharacterRemoteKeysDao
 import com.starwarscharacter.app.features.character.domain.entity.Character
+import com.starwarscharacter.app.features.planet.data.datasource.local.PlanetsDao
+import com.starwarscharacter.app.features.planet.data.datasource.local.PlanetsRemoteKeysDao
 import com.starwarscharacter.app.features.starships.data.datasource.local.StarShipsDao
 import com.starwarscharacter.app.features.starships.data.datasource.local.StarShipsRemoteKeysDao
 import com.starwarscharacter.app.features.starships.data.datasource.local.StarShipsRemotekeys
@@ -29,6 +31,9 @@ abstract class StarWarsDatabase: RoomDatabase() {
 
     abstract fun starshipsDao(): StarShipsDao
     abstract fun starShipsRemoteKeysDao(): StarShipsRemoteKeysDao
+
+    abstract fun planetsDao(): PlanetsDao
+    abstract fun planetsRemoteKeysDao(): PlanetsRemoteKeysDao
 
 
     companion object{
